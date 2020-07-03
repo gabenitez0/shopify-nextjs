@@ -16,7 +16,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-const { SHOPIFY_API_SECRET_KEY, NEXT_PUBLIC_SHOPIFY_API_KEY } = process.env;
+const { SHOPIFY_API_SECRET_KEY, SHOPIFY_API_KEY } = process.env;
 
 app.prepare().then(() => {
   const server = new Koa();
@@ -26,7 +26,7 @@ app.prepare().then(() => {
   // Shopify Auth
   server.use(
     createShopifyAuth({
-      apiKey: NEXT_PUBLIC_SHOPIFY_API_KEY,
+      apiKey: SHOPIFY_API_KEY,
       secret: SHOPIFY_API_SECRET_KEY,
       scopes: ['read_products'],
       afterAuth(ctx) {

@@ -15,16 +15,16 @@ const Index: NextPage<IndexProps> = () => {
   return (
     <Page>
       <TitleBar
-        title="商品一覧"
+        title="asd2"
         primaryAction={{
-          content: '再取得',
+          content: 'asd3',
           onAction: (): void => console.log('clicked'),
         }}
       />
       <Card sectioned>
         <FormLayout>
           <TextField
-            label="最大表示件数"
+            label="asd4"
             value={first}
             onChange={handleChange}
           />

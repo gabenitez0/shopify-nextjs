@@ -25,9 +25,9 @@ const client = new ApolloClient({
 class MyApp extends App {
   render() {
     const { Component, pageProps }: AppProps = this.props;
-    const { NEXT_PUBLIC_SHOPIFY_API_KEY } = process.env;
+    const { SHOPIFY_API_KEY } = process.env;
     const config = {
-      apiKey: NEXT_PUBLIC_SHOPIFY_API_KEY,
+      apiKey: SHOPIFY_API_KEY,
       shopOrigin: Cookies.get('shopOrigin'),
       forceRedirect: true,
     };

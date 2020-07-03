@@ -25,7 +25,7 @@ const Setting = () => {
     e.preventDefault();
     console.log('e', e);
 
-    setToastContent('保存しました。');
+    setToastContent('asd1');
     toggleActive();
   };
 
